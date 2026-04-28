@@ -1,89 +1,125 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
-import heroImg from "@/assets/hero-model.jpg";
+import { ArrowRight, Sparkles, Star } from "lucide-react";
+import { IMG } from "./images";
 import { WHATSAPP_URL } from "./WhatsAppFloat";
 
 const Hero = () => (
   <section id="top" className="relative min-h-screen overflow-hidden bg-gradient-soft">
-    <div className="container relative z-10 grid min-h-screen items-center gap-12 pt-32 pb-20 lg:grid-cols-12 lg:pt-40">
+    {/* Decorative blobs */}
+    <div className="pointer-events-none absolute -left-40 top-1/4 h-[28rem] w-[28rem] rounded-full bg-rose-luxury opacity-40 blur-[120px]" />
+    <div className="pointer-events-none absolute -right-32 bottom-0 h-[32rem] w-[32rem] rounded-full bg-nude opacity-60 blur-[120px]" />
+    <div className="pointer-events-none absolute right-1/3 top-10 h-72 w-72 rounded-full bg-champagne opacity-50 blur-[100px]" />
+
+    <div className="container relative z-10 grid min-h-screen items-center gap-12 pt-28 pb-16 lg:grid-cols-12 lg:gap-8 lg:pt-36">
       {/* Text */}
-      <div className="lg:col-span-6 space-y-8 animate-fade-up">
+      <div className="lg:col-span-6 space-y-7 animate-fade-up">
         <div className="inline-flex items-center gap-3">
           <span className="h-px w-10 bg-gold" />
-          <span className="text-[11px] tracking-luxury uppercase text-gold font-medium">
+          <span className="text-[10px] sm:text-[11px] tracking-luxury uppercase text-gold font-medium">
             Estética Avançada · Desde 2012
           </span>
         </div>
 
-        <h1 className="font-display text-5xl leading-[1.05] text-primary md:text-6xl lg:text-7xl">
-          Realce sua beleza com
-          <span className="italic text-accent"> naturalidade </span>
-          e segurança.
+        <h1 className="font-display text-[2.6rem] leading-[1.02] text-primary sm:text-5xl md:text-6xl lg:text-[5rem] lg:leading-[0.98]">
+          Sua beleza,<br />
+          <span className="font-italic-serif text-gradient-gold">refinada</span> com <br className="hidden sm:block" />
+          arte e ciência.
         </h1>
 
         <p className="max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-          Tratamentos estéticos personalizados, conduzidos por especialistas, para resultados sutis,
-          elegantes e que valorizam a sua melhor versão.
+          Tratamentos faciais exclusivos em ambiente acolhedor, conduzidos por especialistas que
+          entendem que <em>menos é mais</em>. Resultados naturais, elegantes — só seus.
         </p>
 
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-          <Button asChild variant="luxury" size="xl">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+          <Button asChild variant="luxury" size="xl" className="group">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-              Agendar avaliação <ArrowRight className="ml-1 h-4 w-4" />
+              Agendar avaliação grátis
+              <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
           </Button>
           <Button asChild variant="ghostLux" size="xl">
-            <a href="#procedimentos">Conhecer procedimentos</a>
+            <a href="#procedimentos">Ver procedimentos</a>
           </Button>
         </div>
 
-        <div className="flex flex-wrap items-center gap-8 pt-6 border-t border-border/60">
-          {[
-            { n: "+12", l: "anos de experiência" },
-            { n: "+8.000", l: "pacientes atendidas" },
-            { n: "4.9★", l: "avaliação média" },
-          ].map((s) => (
-            <div key={s.l}>
-              <div className="font-display text-2xl text-primary">{s.n}</div>
-              <div className="text-[10px] tracking-luxury uppercase text-muted-foreground mt-1">{s.l}</div>
+        {/* Social proof row */}
+        <div className="flex flex-wrap items-center gap-6 pt-6 sm:gap-8">
+          <div className="flex -space-x-3">
+            {[IMG.test1, IMG.test2, IMG.test3].map((src) => (
+              <img
+                key={src}
+                src={src}
+                alt=""
+                className="h-10 w-10 rounded-full border-2 border-background object-cover shadow-card-lux"
+              />
+            ))}
+          </div>
+          <div>
+            <div className="flex items-center gap-1">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="h-3.5 w-3.5 fill-gold text-gold" />
+              ))}
+              <span className="ml-2 text-xs font-medium text-primary">4.9/5</span>
             </div>
-          ))}
+            <div className="mt-1 text-[10px] tracking-elegant uppercase text-muted-foreground">
+              +8.000 pacientes encantadas
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Image */}
       <div className="lg:col-span-6 relative">
-        <div className="relative mx-auto aspect-[4/5] w-full max-w-lg overflow-hidden rounded-sm shadow-luxury">
+        <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-sm shadow-luxury sm:max-w-lg">
           <img
-            src={heroImg}
-            alt="Mulher elegante com pele radiante após tratamento estético"
+            src={IMG.hero}
+            alt="Mulher elegante com pele radiante após tratamento estético premium"
             className="h-full w-full object-cover animate-slow-zoom"
             width={1080}
             height={1350}
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent" />
+
+          {/* On-image badge */}
+          <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-background/90 px-3 py-1.5 backdrop-blur">
+            <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse" />
+            <span className="text-[10px] tracking-elegant uppercase text-primary">Agenda aberta</span>
+          </div>
         </div>
 
-        {/* Floating card */}
-        <div className="absolute -bottom-6 -left-2 hidden md:flex max-w-xs items-start gap-3 rounded-sm bg-card p-5 shadow-luxury animate-float-soft">
+        {/* Floating card — bottom */}
+        <div className="absolute -bottom-6 left-2 hidden max-w-[16rem] items-start gap-3 rounded-sm bg-card p-4 shadow-luxury animate-float-soft sm:flex md:left-0">
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-gold">
             <Sparkles className="h-4 w-4 text-primary" />
           </div>
           <div>
-            <div className="text-[10px] tracking-luxury uppercase text-gold">Avaliação</div>
-            <div className="mt-1 font-display text-lg leading-tight text-primary">Primeira consulta gratuita</div>
+            <div className="text-[10px] tracking-luxury uppercase text-gold">Cortesia</div>
+            <div className="mt-1 font-display text-base leading-tight text-primary">
+              1ª avaliação gratuita
+            </div>
           </div>
         </div>
 
+        {/* Floating card — top right */}
+        <div className="absolute -right-2 top-6 hidden rounded-sm bg-card/95 p-3 shadow-luxury backdrop-blur md:block animate-float-soft" style={{ animationDelay: "1.5s" }}>
+          <div className="text-[9px] tracking-luxury uppercase text-gold">Resultado</div>
+          <div className="font-display text-3xl text-primary">+98%</div>
+          <div className="text-[10px] text-muted-foreground">satisfação real</div>
+        </div>
+
         {/* Decorative gold ring */}
-        <div className="absolute -right-8 -top-8 hidden h-40 w-40 rounded-full border border-gold/40 lg:block" />
+        <div className="absolute -right-10 -top-10 hidden h-44 w-44 rounded-full border border-gold/40 lg:block" />
+        <div className="absolute -left-6 bottom-20 hidden h-24 w-24 rounded-full border border-accent/30 lg:block" />
       </div>
     </div>
 
-    {/* Soft veil */}
-    <div className="pointer-events-none absolute -left-40 top-1/3 h-96 w-96 rounded-full bg-rose-luxury opacity-30 blur-3xl" />
-    <div className="pointer-events-none absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-nude opacity-50 blur-3xl" />
+    {/* Scroll cue */}
+    <div className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 lg:flex">
+      <span className="text-[9px] tracking-luxury uppercase text-muted-foreground">Role</span>
+      <span className="h-10 w-px bg-gradient-to-b from-gold to-transparent" />
+    </div>
   </section>
 );
 
