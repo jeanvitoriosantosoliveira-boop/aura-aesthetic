@@ -1,16 +1,46 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from "react";
+import Navbar from "@/components/landing/Navbar";
+import Hero from "@/components/landing/Hero";
+import Marquee from "@/components/landing/Marquee";
+import Procedures from "@/components/landing/Procedures";
+import About from "@/components/landing/About";
+import Results from "@/components/landing/Results";
+import Objections from "@/components/landing/Objections";
+import Testimonials from "@/components/landing/Testimonials";
+import Offer from "@/components/landing/Offer";
+import Footer from "@/components/landing/Footer";
+import WhatsAppFloat from "@/components/landing/WhatsAppFloat";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  useEffect(() => {
+    document.title = "Maison Estética · Clínica de Estética Premium em São Paulo";
+    const meta = document.querySelector('meta[name="description"]') || (() => {
+      const m = document.createElement("meta");
+      m.setAttribute("name", "description");
+      document.head.appendChild(m);
+      return m;
+    })();
+    meta.setAttribute(
+      "content",
+      "Tratamentos estéticos personalizados — botox, preenchimento, harmonização e skincare premium. Resultados naturais, com segurança e elegância."
+    );
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <main className="min-h-screen bg-background">
+      <Navbar />
+      <Hero />
+      <Marquee />
+      <Procedures />
+      <About />
+      <Results />
+      <Objections />
+      <Testimonials />
+      <Offer />
+      <Footer />
+      <WhatsAppFloat />
+    </main>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
