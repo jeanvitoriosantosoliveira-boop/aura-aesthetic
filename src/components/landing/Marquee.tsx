@@ -9,7 +9,7 @@ const items = [
 
 const Marquee = () => (
   <section className="bg-primary py-5 overflow-hidden border-y border-gold/20">
-    <div className="flex animate-[shimmer_30s_linear_infinite] whitespace-nowrap gap-12">
+    <div className="marquee-track flex whitespace-nowrap gap-12">
       {[...items, ...items, ...items].map((t, i) => (
         <span key={i} className="flex items-center gap-12 text-[11px] tracking-luxury uppercase text-primary-foreground/80">
           {t}
@@ -18,8 +18,8 @@ const Marquee = () => (
       ))}
     </div>
     <style>{`
-      @keyframes scroll-x { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-      section > div { animation: scroll-x 35s linear infinite; }
+      @keyframes marquee-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+      .marquee-track { animation: marquee-scroll 40s linear infinite; }
     `}</style>
   </section>
 );
