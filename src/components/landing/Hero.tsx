@@ -20,7 +20,7 @@ const Hero = () => (
           </span>
         </div>
 
-        <h1 className="font-display text-[2.6rem] leading-[1.02] text-primary sm:text-5xl md:text-6xl lg:text-[5rem] lg:leading-[0.98]">
+        <h1 className="font-display text-[2.1rem] leading-[1.05] text-primary xs:text-[2.4rem] sm:text-5xl md:text-6xl lg:text-[5rem] lg:leading-[0.98] break-words">
           Sua beleza<br />
           <span className="font-italic-serif text-gradient-gold">refinada</span> com <br className="hidden sm:block" />
           arte e ciência.
@@ -32,13 +32,13 @@ const Hero = () => (
         </p>
 
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-          <Button asChild variant="luxury" size="xl" className="group">
+          <Button asChild variant="luxury" size="xl" className="group w-full sm:w-auto">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               Agendar avaliação grátis
               <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
           </Button>
-          <Button asChild variant="ghostLux" size="xl">
+          <Button asChild variant="ghostLux" size="xl" className="w-full sm:w-auto">
             <a href="#procedimentos">Ver procedimentos</a>
           </Button>
         </div>
