@@ -20,7 +20,7 @@ const Hero = () => (
           </span>
         </div>
 
-        <h1 className="font-display text-[2.6rem] leading-[1.02] text-primary sm:text-5xl md:text-6xl lg:text-[5rem] lg:leading-[0.98]">
+        <h1 className="font-display text-[2.1rem] leading-[1.05] text-primary xs:text-[2.4rem] sm:text-5xl md:text-6xl lg:text-[5rem] lg:leading-[0.98] break-words">
           Sua beleza<br />
           <span className="font-italic-serif text-gradient-gold">refinada</span> com <br className="hidden sm:block" />
           arte e ciência.
