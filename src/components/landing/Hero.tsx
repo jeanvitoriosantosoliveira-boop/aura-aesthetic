@@ -21,7 +21,7 @@ const Hero = () => (
         </div>
 
         <h1 className="font-display text-[2.6rem] leading-[1.02] text-primary sm:text-5xl md:text-6xl lg:text-[5rem] lg:leading-[0.98]">
-          Sua beleza,<br />
+          Sua beleza<br />
           <span className="font-italic-serif text-gradient-gold">refinada</span> com <br className="hidden sm:block" />
           arte e ciência.
         </h1>

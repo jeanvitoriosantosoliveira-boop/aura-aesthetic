@@ -6,15 +6,15 @@ export const IMG = {
   heroAlt: "https://images.unsplash.com/photo-1614108233604-32edd6d10b73?auto=format&fit=crop&w=1400&q=80",
 
   // Procedures
-  botox: "https://images.unsplash.com/photo-1614859275375-e4a0bb3a2c87?auto=format&fit=crop&w=1200&q=80",
-  preench: "https://images.unsplash.com/photo-1599842057874-37393e9342df?auto=format&fit=crop&w=1200&q=80",
-  harm: "https://images.unsplash.com/photo-1633622857541-d91ea7b3fa57?auto=format&fit=crop&w=1200&q=80",
-  limpeza: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=80",
-  laser: "https://images.unsplash.com/photo-1612342061378-0388f1c46db2?auto=format&fit=crop&w=1200&q=80",
-  massage: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80",
+  botox: "src/components/images/blutonica.jpg",
+  preench: "src/components/images/preenchimentoLabial.jpg",
+  harm: "src/components/images/harmo.jpg",
+  limpeza: "src/components/images/harmo.jpg",
+  laser: "src/components/images/laser.jpg",
+  massage: "src/components/images/drenagem.jpg",
 
   // Clinic / professional
-  doctor: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=1200&q=80",
+  doctor: "src/components/images/diretora.jpg",
   interior: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80",
   interior2: "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=1200&q=80",
 
