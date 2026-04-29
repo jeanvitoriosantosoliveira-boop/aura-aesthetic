@@ -6,15 +6,15 @@ export const IMG = {
   heroAlt: "https://images.unsplash.com/photo-1614108233604-32edd6d10b73?auto=format&fit=crop&w=1400&q=80",
 
   // Procedures
-  botox: "src/components/images/blutonica.jpg",
-  preench: "src/components/images/preenchimentoLabial.jpg",
-  harm: "src/components/images/harmo.jpg",
-  limpeza: "src/components/images/harmo.jpg",
-  laser: "src/components/images/laser.jpg",
-  massage: "src/components/images/drenagem.jpg",
+  botox: "/images/blutonica.jpg",
+  preench: "/images/preenchimentoLabial.jpg",
+  harm: "/images/harmo.jpg",
+  limpeza: "/images/harmo.jpg",
+  laser: "/images/laser.jpg",
+  massage: "/images/drenagem.jpg",
 
   // Clinic / professional
-  doctor: "src/components/images/diretora.jpg",
+  doctor: "/images/diretora.jpg",
   interior: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80",
   interior2: "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=1200&q=80",
 
