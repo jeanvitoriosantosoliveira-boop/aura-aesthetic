@@ -6,10 +6,10 @@ export const IMG = {
   heroAlt: "https://images.unsplash.com/photo-1614108233604-32edd6d10b73?auto=format&fit=crop&w=1400&q=80",
 
   // Procedures
-  botox: "../images/blutonica.jpg",
+  botox: "/images/blutonica.jpg",
   preench: "/images/preenchimentoLabial.jpg",
   harm: "/images/harmo.jpg",
-  limpeza: "/images/harmo.jpg",
+  limpeza: "/images/limpeza.jpg",
   laser: "/images/laser.jpg",
   massage: "/images/drenagem.jpg",
 
