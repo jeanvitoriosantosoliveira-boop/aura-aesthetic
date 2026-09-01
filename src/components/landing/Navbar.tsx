@@ -29,7 +29,7 @@ const Navbar = () => {
     >
       <div className="container flex items-center justify-between gap-4">
         <a href="#top" className="flex flex-col leading-none">
-          <span className="font-display text-xl tracking-tight text-primary sm:text-2xl">Maison Estética</span>
+          <span className="font-display text-xl tracking-tight text-primary sm:text-2xl">JVS Estética</span>
           <span className="text-[9px] tracking-luxury uppercase text-muted-foreground mt-1 sm:text-[10px]">
             Clínica Premium
           </span>

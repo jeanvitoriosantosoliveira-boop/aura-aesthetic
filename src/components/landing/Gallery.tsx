@@ -32,7 +32,7 @@ const Gallery = () => (
             <div className={`group relative h-full w-full overflow-hidden rounded-sm shadow-card-lux ${g.span}`}>
               <img
                 src={g.src}
-                alt="Ambiente Maison Estética"
+                alt="Ambiente JVS Estética"
                 loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"
               />

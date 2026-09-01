@@ -2,7 +2,7 @@ import { MessageCircle, Instagram } from "lucide-react";
 
 const WHATSAPP_NUMBER = "5546991163405";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-  "Olá! Vim pelo site e gostaria de agendar minha avaliação na Maison Estética."
+  "Olá! Vim pelo site e gostaria de agendar minha avaliação na JVS Estética."
 )}`;
 const INSTAGRAM_URL = "https://www.instagram.com/jeandeveloper/";
 

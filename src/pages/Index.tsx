@@ -14,7 +14,7 @@ import WhatsAppFloat from "@/components/landing/WhatsAppFloat";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Maison Estética · Clínica de Estética Premium";
+    document.title = "JVS Estética · Clínica de Estética Premium";
     const meta = document.querySelector('meta[name="description"]') || (() => {
       const m = document.createElement("meta");
       m.setAttribute("name", "description");

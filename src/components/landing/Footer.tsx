@@ -5,7 +5,7 @@ const Footer = () => (
   <footer className="bg-secondary py-14 border-t border-border md:py-16">
     <div className="container grid gap-10 md:grid-cols-4 md:gap-12">
       <div className="md:col-span-2">
-        <div className="font-display text-2xl text-primary">Maison Estética</div>
+        <div className="font-display text-2xl text-primary">JVS Estética</div>
         <div className="text-[10px] tracking-luxury uppercase text-muted-foreground mt-1">Clínica Premium</div>
         <p className="mt-6 max-w-sm text-sm text-muted-foreground leading-relaxed">
           Beleza com naturalidade. Há mais de uma década realçando a melhor versão de cada paciente.
@@ -51,7 +51,7 @@ const Footer = () => (
     </div>
 
     <div className="container mt-10 pt-8 border-t border-border flex flex-col gap-3 text-[10px] tracking-luxury uppercase text-muted-foreground sm:flex-row sm:justify-between md:mt-12">
-      <span>© {new Date().getFullYear()} Maison Estética · Todos os direitos reservados</span>
+      <span>© {new Date().getFullYear()} JVS Estética · Todos os direitos reservados</span>
       <span>Responsável técnica: Dra. Helena Vieira · CRM 000.000</span>
     </div>
   </footer>

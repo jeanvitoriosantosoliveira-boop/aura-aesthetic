@@ -56,7 +56,7 @@ const About = () => (
             Onde ciência encontra <span className="font-italic-serif text-gradient-gold">arte</span>.
           </h2>
           <p className="mt-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Há mais de 12 anos, a Maison Estética é referência em tratamentos faciais avançados.
+            Há mais de 12 anos, a JVS Estética é referência em tratamentos faciais avançados.
             Combinamos tecnologia de ponta, técnica refinada e um olhar artístico para entregar
             resultados naturais — sempre fiéis à sua essência.
           </p>
