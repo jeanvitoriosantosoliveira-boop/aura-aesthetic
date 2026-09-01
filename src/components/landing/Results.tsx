@@ -49,14 +49,14 @@ const StatItem = ({ s, i }: { s: typeof stats[number]; i: number }) => {
         <div className="font-display text-5xl text-gradient-gold sm:text-6xl md:text-7xl">
           {s.prefix ?? ""}{val.toLocaleString("pt-BR")}{s.suffix ?? ""}
         </div>
-        <div className="mt-3 text-[10px] tracking-luxury uppercase text-primary-foreground/70">{s.l}</div>
+        <div className="mt-3 text-[10px] tracking-luxury uppercase text-foreground/70">{s.l}</div>
       </div>
     </Reveal>
   );
 };
 
 const Results = () => (
-  <section id="resultados" className="relative grain bg-gradient-noir py-20 md:py-28 text-primary-foreground overflow-hidden">
+  <section id="resultados" className="relative grain bg-gradient-noir py-20 md:py-28 overflow-hidden">
     <div className="pointer-events-none absolute inset-0 opacity-30">
       <div className="absolute -left-40 top-1/4 h-96 w-96 rounded-full bg-gold/30 blur-[120px]" />
       <div className="absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-accent/30 blur-[120px]" />
@@ -66,7 +66,7 @@ const Results = () => (
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-[11px] tracking-luxury uppercase text-gold">Resultados que falam</span>
           <div className="mx-auto mt-4 gold-divider" />
-          <h2 className="mt-6 font-display text-4xl sm:text-5xl md:text-6xl">
+          <h2 className="mt-6 font-display text-4xl text-foreground sm:text-5xl md:text-6xl">
             Números que confirmam a <span className="font-italic-serif text-gradient-gold">excelência</span>
           </h2>
         </div>

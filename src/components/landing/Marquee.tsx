@@ -16,10 +16,10 @@ const Row = ({ reverse = false }: { reverse?: boolean }) => (
       items.map((t, i) => (
         <span
           key={`${k}-${i}`}
-          className="flex items-center gap-6 pr-6 text-[10px] tracking-luxury uppercase text-primary-foreground/85 sm:gap-10 sm:pr-10 sm:text-[11px]"
+          className="flex items-center gap-6 pr-6 text-[10px] tracking-luxury uppercase text-gold-foreground/90 sm:gap-10 sm:pr-10 sm:text-[11px]"
         >
           <span>{t}</span>
-          <span className="font-display text-base leading-none text-primary-foreground/50 sm:text-lg">✦</span>
+          <span className="font-display text-base leading-none text-gold-foreground/60 sm:text-lg">✦</span>
         </span>
       ))
     )}
