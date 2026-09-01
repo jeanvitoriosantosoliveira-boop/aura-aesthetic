@@ -56,8 +56,11 @@ const procedures = [
 ];
 
 const Procedures = () => (
-  <section id="procedimentos" className="relative bg-background py-20 md:py-32">
-    <div className="container">
+  <section id="procedimentos" className="relative overflow-hidden bg-background py-20 md:py-32">
+    <div className="pointer-events-none absolute inset-0 bg-grid-lux opacity-40" />
+    <div className="pointer-events-none absolute -left-40 top-1/3 h-96 w-96 rounded-full bg-gold/10 blur-[130px]" />
+
+    <div className="container relative">
       <Reveal>
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-[11px] tracking-luxury uppercase text-gold">Nossos Procedimentos</span>
@@ -65,33 +68,33 @@ const Procedures = () => (
           <h2 className="mt-6 font-display text-4xl text-primary sm:text-5xl md:text-6xl">
             Tratamentos pensados para <span className="font-italic-serif text-gradient-gold">você</span>
           </h2>
-          <p className="mt-5 text-muted-foreground text-base sm:text-lg">
+          <p className="mt-5 text-base text-muted-foreground sm:text-lg">
             Protocolos personalizados, conduzidos com técnica refinada e olhar artístico.
           </p>
         </div>
       </Reveal>
 
-      <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+      <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-7">
         {procedures.map((p, i) => (
-          <Reveal key={p.name} delay={i * 80}>
-            <article className="group relative h-full overflow-hidden rounded-sm bg-card shadow-card-lux hover-lift hover:shadow-luxury">
+          <Reveal key={p.name} delay={i * 80} className="h-full">
+            <article className="card-lux group h-full">
               <div className="relative aspect-[5/4] overflow-hidden">
                 <img
                   src={p.img}
                   alt={p.name}
                   loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-110"
+                  className="h-full w-full object-cover opacity-90 transition-transform duration-[2s] ease-out group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-veil opacity-90" />
-                <span className="absolute left-4 top-4 rounded-full bg-background/95 px-3 py-1 text-[10px] tracking-luxury uppercase text-primary backdrop-blur">
+                <div className="absolute inset-0 bg-gradient-veil" />
+                <span className="absolute left-4 top-6 rounded-full border border-gold/30 bg-background/70 px-3 py-1 text-[10px] tracking-elegant uppercase text-gold backdrop-blur">
                   {p.tag}
                 </span>
-                <span className="absolute right-4 top-4 rounded-full border border-white/40 bg-black/30 px-3 py-1 text-[10px] tracking-elegant uppercase text-white backdrop-blur">
+                <span className="absolute right-4 top-6 rounded-full border border-primary/20 bg-background/60 px-3 py-1 text-[10px] tracking-elegant uppercase text-primary/80 backdrop-blur">
                   {p.duration}
                 </span>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <h3 className="font-display text-2xl text-white sm:text-3xl">{p.name}</h3>
-                </div>
+                <h3 className="absolute bottom-4 left-6 right-6 font-display text-2xl text-primary sm:text-3xl">
+                  {p.name}
+                </h3>
               </div>
               <div className="p-6 sm:p-7">
                 <p className="text-sm leading-relaxed text-muted-foreground">{p.benefit}</p>
@@ -103,7 +106,7 @@ const Procedures = () => (
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-5 inline-flex items-center gap-2 text-[11px] tracking-elegant uppercase text-primary lux-link group/link"
+                  className="lux-link group/link mt-5 inline-flex items-center gap-2 text-[11px] tracking-elegant uppercase text-primary transition-colors hover:text-gold"
                 >
                   Agendar este procedimento
                   <ArrowUpRight className="h-4 w-4 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />

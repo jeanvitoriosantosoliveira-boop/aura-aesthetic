@@ -15,9 +15,10 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        luxury: "bg-primary text-primary-foreground hover:bg-foreground tracking-elegant uppercase text-xs font-medium transition-all duration-500 shadow-soft-lux hover:shadow-luxury",
-        gold: "bg-gradient-gold text-primary tracking-elegant uppercase text-xs font-medium hover:shadow-gold transition-all duration-500",
-        ghostLux: "bg-transparent border border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground tracking-elegant uppercase text-xs font-medium transition-all duration-500",
+        luxury: "bg-gradient-gold text-primary-foreground tracking-elegant uppercase text-xs font-semibold rounded-full shadow-gold transition-all duration-500 hover:brightness-110 hover:-translate-y-0.5",
+        gold: "bg-gradient-gold text-primary-foreground tracking-elegant uppercase text-xs font-semibold rounded-full shadow-gold transition-all duration-500 hover:brightness-110 hover:-translate-y-0.5",
+        ghostLux: "bg-glass border border-primary/20 text-primary rounded-full backdrop-blur hover:border-gold/60 hover:text-gold tracking-elegant uppercase text-xs font-medium transition-all duration-500",
+
         whatsapp: "bg-[#25D366] text-white hover:bg-[#1ebe57] shadow-lg",
       },
       size: {
